@@ -1,0 +1,74 @@
+﻿@using SOLUTIONS.GALAXY.Domain.Entities
+@using SOLUTIONS.GALAXY.Domain.Enums
+@model Jedi
+@{
+    ViewData["Title"] = "Create";
+    ViewData["Error"] = ViewData["Error"] ?? string.Empty;
+}
+@functions{
+    public IEnumerable<SelectListItem> GetGradeSelectList()
+    {
+        var deptList = new List<SelectListItem>();
+        deptList.Add(new SelectListItem
+        {
+            Text = "Select",
+            Value = ""
+        });
+        foreach (Grade eVal in Enum.GetValues(typeof(Grade)))
+        {
+            deptList.Add(new SelectListItem { Text = Enum.GetName(typeof(Grade), eVal), Value = eVal.ToString() });
+        }
+        return deptList;
+    }
+    public IEnumerable<SelectListItem> GetLightsaberColorSelectList()
+    {
+        var deptList = new List<SelectListItem>();
+        deptList.Add(new SelectListItem
+        {
+            Text = "Select",
+            Value = ""
+        });
+        foreach (LightsaberColor eVal in Enum.GetValues(typeof(LightsaberColor)))
+        {
+            deptList.Add(new SelectListItem { Text = Enum.GetName(typeof(LightsaberColor), eVal), Value = eVal.ToString() });
+        }
+        return deptList;
+    }
+}
+<h2>
+    @Html.ActionLink("<- Regresar", "Index", "Jedis", null)  - Nuevo Jedi
+</h2>
+<form asp-controller="Jedis" asp-action="Create" method="post">
+    <div class="row">
+        <div class="col-lg-7">
+            @Html.AntiForgeryToken()
+            Nombre:
+            <input type="text" data-val="true" asp-for="Name" class="form-control" data-val-required="El nombre es requerido" id="Name" name="Name" />
+            <span asp-validation-for="Name" class="text-danger"></span><br>
+            Edad:
+            <input type="number" data-val="true" asp-for="Age" class="form-control" data-val-required="La edad es requerido" id="Age" name="Age" />
+            <span asp-validation-for="Age" class="text-danger"></span><br>
+            Grado:
+            <select asp-items="@GetGradeSelectList()" asp-for="Grade" data-val="true" class="form-control" data-val-required="El grado es requerido" id="Grade" name="Grade"></select>
+            <span asp-validation-for="Grade" class="text-danger"></span><br>
+            LightsaberColor:
+            <select asp-items="@GetLightsaberColorSelectList()" asp-for="LightsaberColor" data-val="true" class="form-control" data-val-required="El grado es requerido" id="LightsaberColor" name="LightsaberColor"></select>
+            <span asp-validation-for="LightsaberColor" class="text-danger"></span><br>
+            <div class="row">
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-primary">Registar</button>
+                </div>
+                <div class="col-md-10">
+                    @if (!string.IsNullOrEmpty(@ViewData["Error"].ToString()))
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            @ViewData["Error"].ToString()
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+

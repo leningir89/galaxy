@@ -1,0 +1,104 @@
+﻿@using SOLUTIONS.GALAXY.Domain.Entities}
+@using SOLUTIONS.GALAXY.Domain.Enums
+
+@model Jedi
+@{
+    ViewData["Title"] = "_Edit";
+    ViewData["Error"] = ViewData["Error"] ?? string.Empty;
+}
+@functions{
+    public IEnumerable<SelectListItem> GetGradeSelectList()
+    {
+        var deptList = new List<SelectListItem>();
+        deptList.Add(new SelectListItem
+        {
+            Text = "Select",
+            Value = ""
+        });
+        foreach (Grade eVal in Enum.GetValues(typeof(Grade)))
+        {
+            deptList.Add(new SelectListItem { Text = Enum.GetName(typeof(Grade), eVal), Value = eVal.ToString() });
+        }
+        return deptList;
+    }
+    public IEnumerable<SelectListItem> GetLightsaberColorSelectList()
+    {
+        var deptList = new List<SelectListItem>();
+        deptList.Add(new SelectListItem
+        {
+            Text = "Select",
+            Value = ""
+        });
+        foreach (LightsaberColor eVal in Enum.GetValues(typeof(LightsaberColor)))
+        {
+            deptList.Add(new SelectListItem { Text = Enum.GetName(typeof(LightsaberColor), eVal), Value = eVal.ToString() });
+        }
+        return deptList;
+    }
+}
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <form method="post">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">EDITAR</h4>
+            </div>
+            <div class="modal-body">
+                @Html.HiddenFor(m => m.Id)
+                Nombre:
+                <input type="text" data-val="true" asp-for="Name" class="form-control" data-val-required="El nombre es requerido" id="Name" name="Name" />
+                <span asp-validation-for="Name" class="text-danger"></span><br>
+                Edad:
+                <input type="number" data-val="true" asp-for="Age" class="form-control" data-val-required="La edad es requerido" id="Age" name="Age" />
+                <span asp-validation-for="Age" class="text-danger"></span><br>
+                Grado:
+                <select asp-items="@GetGradeSelectList()" asp-for="Grade" data-val="true" class="form-control" data-val-required="El grado es requerido" id="Grade" name="Grade"></select>
+                <span asp-validation-for="Grade" class="text-danger"></span><br>
+
+                LightsaberColor:
+                <select asp-items="@GetLightsaberColorSelectList()" asp-for="LightsaberColor" data-val="true" class="form-control" data-val-required="El grado es requerido" id="LightsaberColor" name="LightsaberColor"></select>
+                <span asp-validation-for="LightsaberColor" class="text-danger"></span><br>
+                @if (!string.IsNullOrEmpty(@ViewData["Error"].ToString()))
+                {
+                    <div class="alert alert-success" role="alert">
+                        @ViewData["Error"].ToString()
+                    </div>
+                }
+            </div>
+            <div class="modal-footer">
+                <button id="btnEditJedi" class="btn btn-primary pull-right">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $("#modalEdit").on("hidden.bs.modal", function () {
+        getJedis();
+    });
+    $(function () {
+        $('#btnEditJedi').on('click', function (evt) {
+            evt.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: '/jedis/Edit',
+                data:
+                {
+                    Id: $("#Id").val(),
+                    Name: $("#Name").val(),
+                    Age:$("#Age").val(),
+                    LightsaberColor: $("#LightsaberColor").val(),
+                    Grade: $("#Grade").val()
+                },
+                success: function (result) { 
+                    $("#myModal").html(result);
+                    $("#modalEdit").modal("show");
+                }
+            });
+        });
+    });
+</script>
+
+
+
+

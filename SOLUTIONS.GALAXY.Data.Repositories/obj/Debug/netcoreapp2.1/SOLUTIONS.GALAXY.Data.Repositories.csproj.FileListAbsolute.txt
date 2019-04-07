@@ -1,0 +1,16 @@
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Data.Repositories.deps.json
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Data.Repositories.dll
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Data.Repositories.pdb
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Domain.dll
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Infraestructure.dll
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Domain.pdb
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Infraestructure.pdb
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Data.Repositories.csprojAssemblyReference.cache
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Data.Repositories.Resources.Scritps.resources
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Data.Repositories.csproj.GenerateResource.cache
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Data.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Data.Repositories.AssemblyInfoInputs.cache
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Data.Repositories.AssemblyInfo.cs
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Data.Repositories.csproj.CopyComplete
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Data.Repositories.dll
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Data.Repositories\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Data.Repositories.pdb

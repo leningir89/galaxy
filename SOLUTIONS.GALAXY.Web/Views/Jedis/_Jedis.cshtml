@@ -1,0 +1,83 @@
+﻿@using SOLUTIONS.GALAXY.Web.Resources
+@model JediViewModel
+@functions{
+    public string GetStatus(bool status)
+    {
+        return status ? "Activo" : "Inactivo";
+    }
+    public string GetStatusBtn(bool status)
+    {
+        return status ? "Activar" : "Inactivar";
+    }
+}
+
+
+@if (Model.Jedis.Any())
+{
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">#Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Estatus</th>
+                <th scope="col">Edad</th>
+                <th scope="col">LightSaber</th>
+                <th scope="col">Grado</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Jedis)
+            {
+                <tr>
+                    <th scope="row">
+                        <input id="@item.Id" type="hidden" />
+                        @String.Format("{0:000}", @item.Id)
+                    </th>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @GetStatus(item.Status)
+                    </td>
+                    <td>@item.Age</td>
+                    <td>@item.LightsaberColor</td>
+                    <td>@item.Grade</td>
+                    <td>
+                        <a href="#" value="@item.Id" id="btnDelete">
+                            @GetStatusBtn(!item.Status)
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#" value="@item.Id" id="btnEdit" onclick="edit(@item.Id);">Editar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+else
+{
+    <br />
+    <div class="alert alert-info" role="alert">
+        @Html.Raw(MessagesWeb.WithoutResults)
+    </div>
+}
+<script type="text/javascript">
+    function edit(id) {
+        $.ajax({
+            type: 'GET',
+            url: '/jedis/_Edit',
+            data: { id: id },
+            success: function (result) {
+                $("#myModal").html(result);
+                $("#modalEdit").modal("show");
+            }
+        });
+    }
+  
+</script>
+
+

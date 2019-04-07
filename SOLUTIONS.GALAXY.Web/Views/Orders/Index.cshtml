@@ -1,0 +1,89 @@
+﻿@using SOLUTIONS.GALAXY.Domain.Entities
+@using SOLUTIONS.GALAXY.Application.Interfaces
+@model IEnumerable<HologramList>
+
+@inject IJediApp jediApp
+@inject IHologramsApp hologramsApp
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Pedidos</h2>
+@functions{
+
+    public IEnumerable<SelectListItem> GetJedisSelectList(IList<Jedi> jedis)
+    {
+        var deptList = new List<SelectListItem>();
+        foreach (var eVal in jedis.Where(x => x.Status))
+        {
+            deptList.Add(new SelectListItem { Text = eVal.Name, Value = eVal.Id.ToString() });
+        }
+        return deptList;
+    }
+    public IEnumerable<SelectListItem> GetHologramsSelectList(IList<Hologram> holograms)
+    {
+        var deptList = new List<SelectListItem>();
+        foreach (var eVal in holograms)
+        {
+            deptList.Add(new SelectListItem { Text = eVal.Name, Value = eVal.Id.ToString() });
+        }
+        return deptList;
+    }
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <span>
+            Seleccione el Jedi:
+        </span>
+        <select id="jedi" asp-items="@GetJedisSelectList(jediApp.GetAll())" class="form-control"></select>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-6">
+        <span>
+            Seleccione el Holograma:
+        </span>
+        <select id="hologram" asp-items="@GetHologramsSelectList(hologramsApp.GetHologramsActive())" class="form-control"></select>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-4">
+        <div id="alertMessage" class="alert alert-success">
+            <span id="lblMessage">
+                Seleccione el Jedi y Holograma para realizar un pedido.
+            </span>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <a id="btnRegister" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" href="#">Registrar pedido</a>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $('#btnRegister').on('click', function (evt) {
+            evt.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: '/Orders/Create',
+                data:
+                {
+                    JediId: $("#jedi").val(),
+                    HologramId: $("#hologram").val(),
+                },
+                success: function (result) {
+                   $("#lblMessage").html(result.description);
+                    if (result.isError) {
+                        $("#alertMessage").removeClass("alert-success").addClass("alert-danger");
+                    }
+                    else {
+                        $("#alertMessage").removeClass("alert-danger").addClass("alert-success");
+                    }
+                }
+            });
+        });
+    });
+</script>

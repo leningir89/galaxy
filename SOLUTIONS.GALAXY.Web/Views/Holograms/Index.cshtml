@@ -1,0 +1,50 @@
+﻿@using SOLUTIONS.GALAXY.Domain.Entities
+@model IEnumerable<HologramList>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Pedidos</h2>
+
+<div class="row">
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope="col">#Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Duración</th>
+                <th scope="col">Jedis</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">
+                        @String.Format("{0:000}", @item.Id)
+                    </th>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @String.Concat(@item.Duration + " minutos.")
+                    </td>
+                    <td>
+                        @if (item.Jedis.Any())
+                        {
+                            @foreach (var jedi in item.Jedis)
+                            {
+                                <span>@jedi.Name , @jedi.Grade</span><br />
+                            }
+                        }
+                        else
+                        {
+                            <strong style="color:red;">Sin registros</strong>
+                        }
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

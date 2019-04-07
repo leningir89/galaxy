@@ -1,0 +1,16 @@
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Services.deps.json
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Services.dll
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Services.pdb
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Domain.dll
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Infraestructure.dll
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\bin\Debug\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Domain.pdb
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Infraestructure.pdb
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\bin\Debug\netcoreapp2.1\System.Data.SqlClient.xml
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Services.csprojAssemblyReference.cache
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Services.csproj.CoreCompileInputs.cache
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Services.AssemblyInfoInputs.cache
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Services.AssemblyInfo.cs
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Services.csproj.CopyComplete
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Services.dll
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Services\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Services.pdb

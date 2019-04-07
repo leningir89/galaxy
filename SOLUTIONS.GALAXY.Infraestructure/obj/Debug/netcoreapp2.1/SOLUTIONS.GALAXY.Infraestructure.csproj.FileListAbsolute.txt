@@ -1,0 +1,12 @@
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Infraestructure\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Infraestructure.deps.json
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Infraestructure\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Infraestructure.dll
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Infraestructure\bin\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Infraestructure.pdb
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Infraestructure\bin\Debug\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Infraestructure\bin\Debug\netcoreapp2.1\System.Data.SqlClient.xml
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Infraestructure\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Infraestructure.csproj.CoreCompileInputs.cache
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Infraestructure\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Infraestructure.AssemblyInfoInputs.cache
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Infraestructure\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Infraestructure.AssemblyInfo.cs
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Infraestructure\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Infraestructure.csproj.CopyComplete
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Infraestructure\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Infraestructure.dll
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Infraestructure\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Infraestructure.pdb
+C:\Users\rlenin\Documents\Test\SOLUTIONS.GALAXY.Infraestructure\obj\Debug\netcoreapp2.1\SOLUTIONS.GALAXY.Infraestructure.csprojAssemblyReference.cache
